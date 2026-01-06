@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grave</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        .hint {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body onclick="playMusic()">
+    <div class="container">
+        <h1>Grave sends his regards.</h1>
+        <p>how you gonna let this happen</p>
+
+        <!-- GIF IMAGE -->
+        <img src="https://cdn.discordapp.com/attachments/1451217722863259800/1457936813350977693/eldritch-smile.gif?ex=695dd0f7&is=695c7f77&hm=8736814dbe784b19e343251817d1e08e7cefb40e01f0574e71312e910c4aab8a&" alt="gif">
+
+        <div class="hint">(click anywhere)</div>
+    </div>
+
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playMusic() {
+            const music = document.getElementById("bgMusic");
+            music.play();
+        }
+    </script>
+</body>
+</html>
